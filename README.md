@@ -29,3 +29,29 @@ class Main {
 ✍️ "Hello, World";
 🌝
 ```
+
+## Guia rápido
+
+| Símbolo  | Significado |
+| ------------- | ------------- |
+| 🌞 | Início do programa |
+| 🌝 | Fim do programa |
+| ✍️ | Escrever em tela |
+| ➕ | Soma |
+| ➖ | Subtração |
+| ✖️ | Multiplicação |
+| ➗ | Divisão |
+| 😂 | Tipo de dado inteiro |
+| 😋 | Tipo de dado caractere |
+| 😎 | Tipo de dado ponto flutuante |
+| 😙 | Tipo de dado ponto flutuante de dupla precisão |
+| 😣 | Tipo de dado cadeia de caracteres |
+| 👉 | Laço de repetição do tipo "para" |
+| 👇 | Início de laço do tipo "faça enquanto" |
+| 👆 | Fim do laço do tipo "faça enquanto |
+| ✋ | Terminar laço (break) |
+| 🤔 | Condicional Se ... |
+| ✌️ | Início de condicionais Se... e Senão... (Então) |
+| 😠 | Condicional Senão |
+| 😖 | Condicional Senão Se (else if) |
+
