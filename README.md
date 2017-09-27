@@ -64,6 +64,13 @@ class Main {
 
 ## Exemplos
 
+A linguagem é delimitada por um início e fim. Tudo o que estiver fora destes delimitadores será considerado um erro de sintaxe. Portanto:
+
+```
+<início> -> 🌞 <estrutura> 🌚
+<estrutura> -> <declaração de variáveis> | <operação de E/S> | <condicional> | <laço de repetição> 
+```
+
 Ler dois valores inteiros e retornar o maior deles.
 
 ```
