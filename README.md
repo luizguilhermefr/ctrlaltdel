@@ -27,7 +27,7 @@ class Main {
 ```
 🌞
 ✍️ "Hello, World";
-🌝
+🌚
 ```
 
 ## Guia rápido
@@ -35,7 +35,7 @@ class Main {
 | Símbolo  | Significado |
 | ------------- | ------------- |
 | 🌞 | Início do programa |
-| 🌝 | Fim do programa |
+| 🌚 | Fim do programa |
 | ✍️ | Escrever em tela |
 | ➕ | Soma |
 | ➖ | Subtração |
