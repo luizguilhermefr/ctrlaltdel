@@ -36,7 +36,8 @@ class Main {
 | ------------- | ------------- |
 | 🌞 | Início do programa |
 | 🌚 | Fim do programa |
-| ✍️ | Escrever em tela |
+| ✍️ | E/S Escrever em tela |
+| 📰 | E/S Ler do teclado |
 | ➕ | Soma |
 | ➖ | Subtração |
 | ✖️ | Multiplicação |
@@ -51,7 +52,32 @@ class Main {
 | 👆 | Fim do laço do tipo "faça enquanto |
 | ✋ | Terminar laço (break) |
 | 🤔 | Condicional Se ... |
-| ✌️ | Início de condicionais Se... e Senão... (Então) |
+| 👍 | Delimitador inicial de bloco |
+| 👎 | Delimitador final de bloco |
 | 😠 | Condicional Senão |
 | 😖 | Condicional Senão Se (else if) |
+| 🚬 | Comentários de linha única|
+| > | Maior que |
+| < | Menor que |
+| ⤴️ | Maior ou igual que |
+| ⤵️ | Menor ou igual que |
 
+## Exemplos
+
+Ler dois valores inteiros e retornar o maior deles.
+
+```
+🌞                                🚬 início do programa
+  😂 x1, x2;                      🚬 declaração de variáveis
+  ✍️ "Informe o primeiro valor";  🚬 saída de dados em tela
+  📰 x1;                          🚬 entrada do dado x1
+  ✍️ "Informe o segundo valor";   🚬 saída de dados em tela
+  📰 x2;                          🚬 entrada do dado x2
+  🤔 (x1 ⤴️ x2) 👍                 🚬 se x1 maior ou igual que x2, então
+    ✍️ x1;                        🚬 saída de dados em tela
+  👎 😠 👍                          🚬 senão
+    ✍️ x2;                        🚬 saída de dados em tela
+  👎                              🚬 fim se
+🌚                                🚬 fim do programa
+
+```
