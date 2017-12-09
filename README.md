@@ -236,24 +236,24 @@ A atribuição depende do tipo da variável. Cadeias podem receber atribuições
 A linguagem é delimitada por um início e fim. Tudo o que estiver fora destes delimitadores será considerado um erro de sintaxe. Portanto, resumidamente:
 
 > `{ }` (chaves) delimitam um bloco opcional, não foi utilizado chaves para não conflitar com [expressões regulares](http://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html).
+
 > `\E`, usado em expressões regulares, neste contexto significa "qualquer emoji".
 
 ```
 <BEGIN> -> 🌞 <STRUCTURE> 🌚
-<STRUCTURE> -> <VARIABLE DECLARATION> {<STRUCTURE>} | <VARIABLE ASSIGNMENT> {<STRUCTURE>} | <LOOP> {<STRUCTURE>} | <CONDITIONAL> {<STRUCTURE} | <IO> {<STRUCTURE}
+<STRUCTURE> -> <VARIABLE DECLARATION> {<STRUCTURE>} | <VARIABLE ASSIGNMENT> {<STRUCTURE>} | <LOOP> {<STRUCTURE>} | <CONDITIONAL> {<STRUCTURE} | <IO> {<STRUCTURE} | <SPECIAL EXPRESSION> {<STRUCTURE>}
+<SPECIAL_EXPRESSION> -> 👊
 <VARIABLE DECLARATION> -> <VAR_TYPE> <VAR_NAME>
 <VAR_TYPE> -> [😂|😋|😎|🔠]
 <VAR_NAME> -> [0-9A-Za-z_\E]¹[0-9A-Za-z_\E]*
-<VARIABLE_ASSIGNMENT> -> <VAR_NAME> 🤘 <VALUE>
+<VARIABLE_ASSIGNMENT> -> <VAR_NAME> 🤘 <VALUE> | <VAR_NAME> 🤘 <ARITHMETIC_EXP> | <VAR_NAME> 🤘 <BOOLEAN_EXPRESSION>
+<ARITHMETIC_EXP> -> <ARITHMETIC_EXP> | ( <ARITHMETIC_EXP> ) | <VAR_NAME> [➕|➖|✖️|➗] <VAR_NAME> | <VAR_NAME> [➕|➖|✖️|➗] <ARITHMETIC_EXP> | <ARITHMETIC_EXP> [➕|➖|✖️|➗] <VAR_NAME> | <VALUE>
 <VALUE> -> [[👍|👎|❔] | [\d+|\d+.\d+] |  ["\."] | ['\.¹']]
-<LOOP> ->
+<BOOLEAN_EXPRESSION> -> <BOOLEAN_EXPRESSION> | (<BOOLEAN_EXPRESSION>) | <VAR_NAME> | 🚫 (<VAR_NAME>) | <VAR_NAME> [🤙|🤞|🤜|🤛|👩‍❤️‍💋‍👩|⚔️|👥] <VAR_NAME>
+<LOOP> -> 🌊(<BOOLEAN_EXPRESSION>; <VARIABLE_ASSIGNMENT>)\n <STRUCTURE> \n 💧 | 🏄 \n <STRUCTURE> 🏊 (<BOOLEAN_EXPRESSION>)
 <CONDITIONAL> ->
-<IO> -> 
-<declaração de variáveis> -> 😂 <id>; | 😋 <id>; | 😎 <id>; | 😙 <id> ; | 😣 <id> ;
-<id> -> [A-Za-z]¹[0-9A-Za-z_]* | [A-Za-z]¹[0-9A-Za-z_]*, <id>
-<operação de E/S> -> <read> | <write>
-<read> -> 📰 <id>;
-<write> -> ✍️ <id> ;
+<IO> -> 📰 <VAR_NAME> | ✍️ <VAR_NAME>
+
 ```
 
 ## Exemplos
