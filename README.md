@@ -1,5 +1,9 @@
 # Ctrl + Alt + Del ⌨️ 🇧🇷
 
+**Guilherme Felipe Oliveira**
+
+**Luiz Guilherme F. Rosa**
+
 Ctrl + Alt + Del ⌨️ é uma linguagem de programação baseada em [emojis](https://pt.wikipedia.org/wiki/Emoji). Seu nome deriva da clássica sequência de teclas do MS Windows usada em situações onde a máquina não responde como esperado, gerando impaciência e ódio.
 
 ## Recursos
