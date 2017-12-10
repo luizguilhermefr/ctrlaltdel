@@ -119,6 +119,8 @@ Executa um bloco se a condição for satisfeita. Não existe "senão", para este
 👌
 ```
 
+É necessário que a expressão sendo testada esteja envolta em parênteses.
+
 #### Caso
 
 Dado um valor **numérico** ou **caractere**, executa determinado bloco. Os blocos são indicados pela expressão "caso" (👉).
@@ -128,6 +130,8 @@ Dado um valor **numérico** ou **caractere**, executa determinado bloco. Os bloc
 | 🖐️ | Início condicional |
 | ✊ | Fim do bloco condicional |
 | 👉 | Indicador de caso |
+
+É necessário que o valor (ou variável) sendo testado esteja envolto em parênteses. Os elementos de caso não precisam estar.
 
 *Exemplo de código*
 
@@ -142,6 +146,8 @@ Dado um valor **numérico** ou **caractere**, executa determinado bloco. Os bloc
        👊
 ✊
 ```
+
+**Toda** expressão caso deve encerrar com um *break* (👊).
 
 ### Laços de Repetição
 
@@ -199,10 +205,10 @@ A atribuição depende do tipo da variável. Cadeias podem receber atribuições
 *Exemplo de código*
 
 ```
-😂 🤘 👎
-🔠 🤘 "This is some string!"
-😋 🤘 'a'
-😎 🤘 3.14159
+boolVar 🤘 👎
+stringVar 🤘 "This is some string!"
+charVar 🤘 'a'
+numericVar 🤘 3.14159
 ```
 
 ### Emojis reservados
@@ -247,13 +253,13 @@ A linguagem é delimitada por um início e fim. Tudo o que estiver fora destes d
 <VAR_TYPE> -> [😂|😋|😎|🔠]
 <VAR_NAME> -> [0-9A-Za-z_\E]¹[0-9A-Za-z_\E]*
 <VARIABLE_ASSIGNMENT> -> <VAR_NAME> 🤘 <VALUE> | <VAR_NAME> 🤘 <ARITHMETIC_EXP> | <VAR_NAME> 🤘 <BOOLEAN_EXPRESSION>
-<ARITHMETIC_EXP> -> <ARITHMETIC_EXP> | ( <ARITHMETIC_EXP> ) | <VAR_NAME> [➕|➖|✖️|➗] <VAR_NAME> | <VAR_NAME> [➕|➖|✖️|➗] <ARITHMETIC_EXP> | <ARITHMETIC_EXP> [➕|➖|✖️|➗] <VAR_NAME> | <VALUE>
+<ARITHMETIC_EXP> -> ( <ARITHMETIC_EXP> ) | <VAR_NAME> [➕|➖|✖️|➗] <VAR_NAME> | <VAR_NAME> [➕|➖|✖️|➗] <ARITHMETIC_EXP> | <ARITHMETIC_EXP> [➕|➖|✖️|➗] <VAR_NAME> | <VALUE>
 <VALUE> -> [[👍|👎|❔] | [\d+|\d+.\d+] |  ["\."] | ['\.¹']]
-<BOOLEAN_EXPRESSION> -> <BOOLEAN_EXPRESSION> | (<BOOLEAN_EXPRESSION>) | <VAR_NAME> | 🚫 (<VAR_NAME>) | <VAR_NAME> [🤙|🤞|🤜|🤛|👩‍❤️‍💋‍👩|⚔️|👥] <VAR_NAME>
-<LOOP> -> 🌊(<BOOLEAN_EXPRESSION>; <VARIABLE_ASSIGNMENT>)\n <STRUCTURE> \n 💧 | 🏄 \n <STRUCTURE> 🏊 (<BOOLEAN_EXPRESSION>)
-<CONDITIONAL> ->
-<IO> -> 📰 <VAR_NAME> | ✍️ <VAR_NAME>
-
+<BOOLEAN_EXPRESSION> -> (<BOOLEAN_EXPRESSION>) | <VAR_NAME> | 🚫 (<VAR_NAME>) | <VAR_NAME> [🤙|🤞|🤜|🤛|👩‍❤️‍💋‍👩|⚔️|👥] <VAR_NAME> | 👍 | 👎
+<LOOP> -> 🌊(<BOOLEAN_EXPRESSION>; <VARIABLE_ASSIGNMENT>) <STRUCTURE> 💧 | 🏄 <STRUCTURE> 🏊 (<BOOLEAN_EXPRESSION>)
+<CONDITIONAL> -> 🖐️ ([<VAR_NAME>|<VALUE>]) { <CASE_OPTION> } ✊ | 🤔 (<BOOLEAN_EXPRESSION>) <STRUCTURE> 👌
+<CASE_OPTION> -> 👉 ([<VAR_NAME>|<VALUE>]) <STRUCTURE> 👊  { <CASE_OPTION> } | 👉 [<VAR_NAME>|<VALUE>] <STRUCTURE> 👊 { <CASE_OPTION> }
+<IO> -> 📰 <VAR_NAME> | ✍️ <VAR_NAME> | 📰 <VALUE> | ✍️ <VALUE>
 ```
 
 ## Exemplos
@@ -262,8 +268,8 @@ Ler dois valores inteiros e escrever o maior deles.
 
 ```
 🌞
-  😂 x1
-  😂 x2
+  😎 x1
+  😎 x2
   ✍️ "Informe o primeiro valor"
   📰 x1
   ✍️ "Informe o segundo valor"
@@ -274,5 +280,21 @@ Ler dois valores inteiros e escrever o maior deles.
   🤔 (🚫(x1 🤜 x2))
     ✍️ x1
   👌
+🌚
+```
+
+Dado o ano de nascimento de uma pessoa, escrever sua idade
+
+```
+🌞
+  😎 anoNasc
+  😎 idade
+  😎 anoAtual
+  ✍️ "Informe o ano de nascimento"
+  📰 anoNasc
+  ✍️ "Informe o ano atual"
+  📰 anoAtual
+  idade 🤘 anoAtual ➖ anoNasc
+  ✍️ anoNasc
 🌚
 ```
